@@ -81,15 +81,16 @@ Step 2: Open Command Prompt as Administrator
 - Press the ```Windows Key```, type ```cmd```, right-click Command Prompt, and select Run as Administrator.
 
 Step 3: Install the Service Using ```InstallerUtil.exe```
-Depending on your system architecture and your targeted framework version, execute the installation using the absolute path of the Microsoft Native Installer Utility.
+
+Depending on your system architecture and your targeted framework version, Execute the installation using the absolute path of the Microsoft Native Installer Utility, After you finish building, copy all the files in the Debug or Release folder to another folder you create on your ```C``` or ```D``` drive and name it ```MyServices```, because it's best to have a short path for the installed ```.exe``` file..
 
 - For 64-Bit (x64) Systems:
 
-```C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallerUtil.exe "D:\YourProjectPath\bin\Release\YourServiceName.exe"```
+```C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallerUtil.exe "D:\MyServices\YourServiceName.exe"```
 
 - For 32-Bit (x86) Systems:
 
-```C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallerUtil.exe "D:\YourProjectPath\bin\Release\YourServiceName.exe"```
+```C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallerUtil.exe "D:\MyServices\YourServiceName.exe"```
 
 Step 4: Verify and Start the Service via ```services.msc```
 
@@ -107,4 +108,4 @@ Should you need to remove the service from your local machine, execute the utili
 
 - For 64-Bit Systems:
 
-```C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallerUtil.exe /u "D:\YourProjectPath\bin\Release\YourServiceName.exe"```
+```C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallerUtil.exe /u "D:\MyServices\YourServiceName.exe"```
