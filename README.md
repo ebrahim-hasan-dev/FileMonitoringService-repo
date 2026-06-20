@@ -82,15 +82,19 @@ Step 2: Open Command Prompt as Administrator
 
 Step 3: Install the Service Using ```InstallerUtil.exe```
 
-Depending on your system architecture and your targeted framework version, Execute the installation using the absolute path of the Microsoft Native Installer Utility, After you finish building, copy all the files in the Debug or Release folder to another folder you create on your ```C``` or ```D``` drive and name it ```MyServices```, because it's best to have a short path for the installed ```.exe``` file..
+- Depending on your system architecture and your targeted framework version, Execute the installation using the absolute path of the Microsoft Native Installer Utility.
 
-- For 64-Bit (x64) Systems:
+- After you finish building, copy all the files in the Debug or Release folder to another folder you create on your ```C``` or ```D``` drive and name it ```MyServices```, because it's best to have a short path for the installed ```.exe``` file.
 
-```C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallerUtil.exe "D:\MyServices\YourServiceName.exe"```
+- You must navigate to the folder you created ```MyServices``` using the ```cd``` command.
 
-- For 32-Bit (x86) Systems:
+#### For 64-Bit (x64) Systems:
 
-```C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallerUtil.exe "D:\MyServices\YourServiceName.exe"```
+```C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallerUtil.exe YourServiceName.exe```
+
+#### For 32-Bit (x86) Systems:
+
+```C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallerUtil.exe YourServiceName.exe```
 
 Step 4: Verify and Start the Service via ```services.msc```
 
@@ -104,8 +108,6 @@ Step 4: Verify and Start the Service via ```services.msc```
 
 ## 🧹 Uninstallation Guide
 
-Should you need to remove the service from your local machine, execute the utility tool with the ```/u``` flag via Administrator CMD:
+Should you need to remove the service from your local machine, Use the following command via Administrator CMD:
 
-- For 64-Bit Systems:
-
-```C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallerUtil.exe /u "D:\MyServices\YourServiceName.exe"```
+```sc delete YourServiceName```
